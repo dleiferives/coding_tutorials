@@ -1,3 +1,4 @@
+#include <cstdio>
 // so this is a basic coding tutorial series. we will begin with variables, the basis of pretty much all programing.
 //
 // A varible can take the form of many different types. 
@@ -52,4 +53,48 @@
 //So the value in memory is the value 
 //and the adress is called the pointer to the value.
 //
-// Below you will find some examples try to figure out what the final response will be
+//So if you want to get the pointer to a value, you can call it with a *
+//like the following line
+//int * int_pointer;
+//
+//
+//Now the asterisk (*) can be a pointer to a single varible, or to a list of many values. However, on its own it does not have a value
+// if you want to get the pointer to a value. (remember that is the memory adress to the variable and not the varible itself.)
+// you use the &.
+// 
+//    example 
+//    int test = 100;
+//    int *pp = &test;
+//
+// 
+//Now you might be wondering why pp is declared as a pointer. This is dependent as we talked about at the start on Type. 
+//Just like int, float, bool, char. Each of those types also has a pointer type. that means *char is not the same as char. 
+//
+//    example
+//    int test = 100;
+//    int pp = &test;
+//
+//This code would fail, because you cannot cast from a regular int to a *int. 
+//The exact error would be:
+//  Error: invalid conversion between from 'int*' to 'int'
+//
+//
+//
+// 
+//Remember this, the pointer and the value stuff will come up later. 
+//
+//
+//
+int test_pointer()
+{
+  int test_int = 100;
+  int *int_pointer;
+  int_pointer = &test_int;
+  printf("The pointer to the value: %i\nThe first value following the pointer: %i", int_pointer, int_pointer[0]);
+  return 0;
+}
+
+int main()
+{
+  test_pointer();
+}

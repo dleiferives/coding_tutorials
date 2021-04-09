@@ -51,3 +51,5 @@
 //So if you see here, when you create a variable it creates a memory adress that is unique to the varible. and if you write to it, it changes the value at that adress.
 //So the value in memory is the value 
 //and the adress is called the pointer to the value.
+//
+// Below you will find some examples try to figure out what the final response will be
